@@ -6,7 +6,7 @@ pipeline {
     }
         
     stages {
-        stage('Message'){
+        stage('text_message'){
             echo '@everyone Aproveitem que o @Chefe disto tudo tá solteiro!'     
         }
             stage('Notify Discord') {
