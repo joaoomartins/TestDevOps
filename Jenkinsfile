@@ -18,11 +18,7 @@ pipeline {
                         footer: 'Samuel do Papel (O CHEFE)',
                         result: currentBuild.currentResult
                     )
-                    stage('Menssage') {
-                        steps {
-                            echo '@everyone Aproveitem que o @Chefe disto tudo  ta solteiro!'
-                        }
-                    }
+                    echo '@everyone Aproveitem que o @Chefe disto tudo tá solteiro!'
                 }
             }
         }
