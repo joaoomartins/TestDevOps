@@ -4,6 +4,8 @@ pipeline {
     triggers {
         cron('H/30 * * * *')
     }
+
+    stages {
         stage('Notify Discord') {
             steps {
                 script {
