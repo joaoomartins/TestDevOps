@@ -18,10 +18,11 @@ pipeline {
                         footer: 'Samuel do Papel (O CHEFE)',
                         result: currentBuild.currentResult
                     )
-                    discordSend(
-                        webhookURL: 'https://discord.com/api/webhooks/1175144751914291241/3Y6JJVQmBmhOxU-ZNUcaoUhVddVKMD37EqovVsykQqXc9aZVCiayJb3h98rmGrhQ2N1i',
-                        message: '@everyone Aproveitem que o @Chefe disto tudo tá solteiro!'
-                    )
+                    stage('Menssage') {
+                        steps {
+                            echo '@everyone Aproveitem que o @Chefe disto tudo  ta solteiro!'
+                        }
+                    }
                 }
             }
         }
