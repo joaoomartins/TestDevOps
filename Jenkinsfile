@@ -9,7 +9,7 @@ pipeline {
         stage('Notify Discord') {
             steps {
                 script {
-                    discordSend channel: 'nome-do-canal', color: 'good', message: 'Esta é uma mensagem de teste do Jenkins!'
+                    discordSend channel: 't1ntas´s server', color: 'good', message: 'Esta é uma mensagem de teste do Jenkins!'
                 }
             }
         }
