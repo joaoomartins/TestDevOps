@@ -4,7 +4,9 @@ pipeline {
     triggers {
         cron('H/30 * * * *')
     }
-
+    
+    echo '@everyone Aproveitem que o @Chefe disto tudo tá solteiro!'
+    
     stages {
         stage('Notify Discord') {
             steps {
@@ -18,7 +20,6 @@ pipeline {
                         footer: 'Samuel do Papel (O CHEFE)',
                         result: currentBuild.currentResult
                     )
-                    echo '@everyone Aproveitem que o @Chefe disto tudo tá solteiro!'
                 }
             }
         }
