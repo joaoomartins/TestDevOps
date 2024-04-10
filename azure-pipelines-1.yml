@@ -2,8 +2,15 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+stages:
+- stage: Stage1
+  displayName: 'Obter Previsão do Tempo'
+  jobs:
+  - job: Job1
+    displayName: 'Obter Previsão do Tempo para Lisboa'
+    steps:
+    - script: |
+        python scripts/get_weather.py Lisbon
+      displayName: 'Obter Previsão do Tempo'
