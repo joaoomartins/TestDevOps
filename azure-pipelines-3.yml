@@ -1,0 +1,17 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+- stage: Stage1
+  displayName: 'Obter Previsão do Tempo'
+  jobs:
+  - job: Job1
+    displayName: 'Obter Previsão do Tempo para Lisboa'
+    steps:
+    - script: |
+        python scripts/get_weather.py Lisbon
+      displayName: 'Obter Previsão do Tempo'
+
